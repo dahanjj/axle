@@ -10,84 +10,207 @@ interface CalendarEvent {
 }
 
 // Mock Data
-const MOCK_EVENTS: CalendarEvent[] = [
+export const MOCK_EVENTS: CalendarEvent[] = [
     {
-        id: "1",
-        name: "Acme Corp - Campus Visit",
-        color: "#3B82F6",
-        dates: ["2025-10-20"],
+        id: '1',
+        name: 'Acme Corp - Campus Visit',
+        color: '#3B82F6',
+        dates: ['2025-10-20']
     },
     {
-        id: "2",
-        name: "Goldman Sachs - Info Session",
-        color: "#8B5CF6",
-        dates: ["2025-10-21", "2025-10-22"],
+        id: '2',
+        name: 'Goldman Sachs - Info Session',
+        color: '#8B5CF6',
+        dates: ['2025-10-21', '2025-10-22']
     },
     {
-        id: "3",
-        name: "Tech Career Fair",
-        color: "#10B981",
-        dates: ["2025-10-22", "2025-10-23", "2025-10-24", "2025-10-25"],
+        id: '3',
+        name: 'Tech Career Fair',
+        color: '#10B981',
+        dates: ['2025-10-22', '2025-10-25']
     },
     {
-        id: "4",
-        name: "Microsoft - Engineering Workshop",
-        color: "#F59E0B",
-        dates: ["2025-10-23", "2025-10-24"],
+        id: '4',
+        name: 'Microsoft - Engineering Workshop',
+        color: '#F59E0B',
+        dates: ['2025-10-23', '2025-10-24']
     },
     {
-        id: "20",
-        name: "Bloomberg - Data Analytics Day",
-        color: "#06B6D4",
-        dates: ["2025-10-20", "2025-10-27"],
+        id: '5',
+        name: 'Meta - Product Design Session',
+        color: '#EF4444',
+        dates: ['2025-10-23']
     },
     {
-        id: "21",
-        name: "LinkedIn Recruiter Meetup",
-        color: "#0A66C2",
-        dates: ["2025-10-23", "2025-10-27"],
+        id: '6',
+        name: 'Startup Networking Lunch',
+        color: '#EC4899',
+        dates: ['2025-10-24']
     },
     {
-        id: "28",
-        name: "Adobe - Creative Workshop",
-        color: "#FF0000",
-        dates: ["2025-10-30", "2025-10-27"],
+        id: '7',
+        name: 'McKinsey & Co - Consulting Summit',
+        color: '#6366F1',
+        dates: ['2025-10-27', '2025-11-02']
     },
     {
-        id: "7",
-        name: "McKinsey & Co - Consulting Summit",
-        color: "#6366F1",
-        dates: [
-            "2025-10-27",
-            "2025-10-28",
-            "2025-10-29",
-            "2025-10-30",
-            "2025-10-31",
-            "2025-11-01",
-            "2025-11-02",
-        ],
+        id: '8',
+        name: 'Deloitte - Leadership Development',
+        color: '#14B8A6',
+        dates: ['2025-10-28', '2025-10-29', '2025-11-03', '2025-11-04']
     },
     {
-        id: "15",
-        name: "Fall Recruiting Season",
-        color: "#64748B",
-        dates: [
-            "2025-10-27",
-            "2025-11-10",
-            "2025-11-11",
-            "2025-11-12",
-            "2025-11-13",
-            "2025-11-14",
-            "2025-11-15",
-            "2025-11-16",
-            "2025-11-17",
-            "2025-11-18",
-            "2025-11-19",
-            "2025-11-20",
-            "2025-11-21",
-        ],
+        id: '9',
+        name: 'AWS - Cloud Computing Bootcamp',
+        color: '#F97316',
+        dates: ['2025-11-06', '2025-11-08']
     },
+    {
+        id: '10',
+        name: 'J.P. Morgan - Investment Banking Forum',
+        color: '#06B6D4',
+        dates: ['2025-11-09', '2025-11-11']
+    },
+    {
+        id: '11',
+        name: 'Boston Consulting Group - Case Workshop Day 1',
+        color: '#8B5CF6',
+        dates: ['2025-11-12']
+    },
+    {
+        id: '12',
+        name: 'Boston Consulting Group - Case Workshop Day 2',
+        color: '#8B5CF6',
+        dates: ['2025-11-13']
+    },
+    {
+        id: '13',
+        name: 'Finance Industry Expo',
+        color: '#10B981',
+        dates: ['2025-11-12', '2025-11-14']
+    },
+    {
+        id: '14',
+        name: 'Google - Coffee Chats',
+        color: '#EF4444',
+        dates: ['2025-11-13']
+    },
+    {
+        id: '15',
+        name: 'Fall Recruiting Season - Open Access',
+        color: '#64748B',
+        dates: ['2025-11-10', '2025-11-21']
+    },
+    {
+        id: '16',
+        name: 'Salesforce - Sales Engineer Panel',
+        color: '#3B82F6',
+        dates: ['2025-11-17']
+    },
+    {
+        id: '17',
+        name: 'Bain & Company - Strategy Workshop',
+        color: '#F59E0B',
+        dates: ['2025-11-18']
+    },
+    {
+        id: '18',
+        name: 'Apple - Design Thinking Session',
+        color: '#EC4899',
+        dates: ['2025-11-20']
+    },
+    {
+        id: '19',
+        name: 'Stripe - Engineering Mixer',
+        color: '#F97316',
+        dates: ['2025-11-21', '2025-11-22']
+    },
+    {
+        id: '20',
+        name: 'Bloomberg - Data Analytics Day',
+        color: '#06B6D4',
+        dates: ['2025-10-20']
+    },
+    {
+        id: '21',
+        name: 'LinkedIn Recruiter Meetup',
+        color: '#0A66C2',
+        dates: ['2025-10-23']
+    },
+    {
+        id: '22',
+        name: 'Resume Review Workshop',
+        color: '#7C3AED',
+        dates: ['2025-10-23']
+    },
+    {
+        id: '23',
+        name: 'Networking Happy Hour',
+        color: '#F472B6',
+        dates: ['2025-10-23']
+    },
+    {
+        id: '24',
+        name: 'IBM - AI Research Presentation',
+        color: '#0F62FE',
+        dates: ['2025-11-13']
+    },
+    {
+        id: '25',
+        name: 'Twitter/X - Social Media Panel',
+        color: '#1DA1F2',
+        dates: ['2025-11-13']
+    },
+    {
+        id: '26',
+        name: 'Career Services Drop-In',
+        color: '#059669',
+        dates: ['2025-11-13']
+    },
+    {
+        id: '27',
+        name: 'Uber - Product Manager Talk',
+        color: '#000000',
+        dates: ['2025-11-13']
+    },
+    {
+        id: '28',
+        name: 'Adobe - Creative Workshop',
+        color: '#FF0000',
+        dates: ['2025-10-30']
+    },
+    {
+        id: '29',
+        name: 'Spotify - Engineering Culture Talk',
+        color: '#1DB954',
+        dates: ['2025-10-30']
+    },
+    {
+        id: '30',
+        name: 'Tesla - Manufacturing Tour',
+        color: '#CC0000',
+        dates: ['2025-10-30']
+    },
+    {
+        id: '31',
+        name: 'Netflix - Content Strategy Session',
+        color: '#E50914',
+        dates: ['2025-10-30']
+    },
+    {
+        id: '32',
+        name: 'Interview Prep Bootcamp',
+        color: '#9333EA',
+        dates: ['2025-10-30']
+    },
+    {
+        id: '33',
+        name: 'Alumni Networking Event',
+        color: '#14B8A6',
+        dates: ['2025-10-30']
+    }
 ];
+
 
 // Service
 class CalendarService {
@@ -118,7 +241,7 @@ const calendarService = new CalendarService();
 const toLocalDate = (date: Date) => date.toLocaleDateString("en-CA");
 
 export default function CalendarWidget() {
-    const [currentDate, setCurrentDate] = useState(new Date(2025, 9, 1));
+    const [currentDate, setCurrentDate] = useState(new Date(2025, 10, 1));
     const [eventsByDate, setEventsByDate] = useState<Map<string, CalendarEvent[]>>(new Map());
     const [loading, setLoading] = useState(false);
 
@@ -199,8 +322,8 @@ export default function CalendarWidget() {
     const calendarDays = generateCalendar();
 
     return (
-        <div className="flex items-center justify-center min-h-screen w-screen bg-gradient-to-br from-blue-50 to-indigo-100 overflow-hidden">
-            <div className="bg-white rounded-2xl shadow-xl p-6 w-[1200px]">
+        <div className="flex justify-center h-screen w-screen bg-gradient-to-br from-blue-50 to-indigo-100 overflow-hidden">
+            <div className="bg-white rounded-2xl shadow-xl p-6 max-w-[1200px] w-full mx-4 h-fit">
                 {/* HEADER */}
                 <div className="flex items-center justify-between mb-6">
                     <button
@@ -227,7 +350,7 @@ export default function CalendarWidget() {
                 {/* WEEKDAY HEADERS */}
                 <div className="grid grid-cols-7 gap-2 mb-2">
                     {["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"].map((d) => (
-                        <div key={d} className="text-center text-sm font-medium text-gray-500 py-2 w-40">
+                        <div key={d} className="text-center text-sm font-medium text-gray-500 py-2">
                             {d}
                         </div>
                     ))}
@@ -237,12 +360,12 @@ export default function CalendarWidget() {
                 <div className="grid grid-cols-7 gap-2">
                     {calendarDays.map((item, idx) =>
                         !item.isCurrentMonth ? (
-                            <div key={idx} className="h-28 w-40 border-2 border-transparent" />
+                            <div key={idx} className="h-28 border-2 border-transparent" />
                         ) : (
                             <div
                                 key={idx}
                                 className={`
-                                    h-28 w-40 flex flex-col items-start p-2 rounded-lg border-2 transition
+                                    h-28 flex flex-col items-start p-2 rounded-lg border-2 transition
                                     ${isToday(item.day)
                                     ? "border-blue-500 bg-blue-50"
                                     : "border-gray-200 hover:border-gray-300 bg-white"
