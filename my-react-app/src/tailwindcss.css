@@ -1,0 +1,16 @@
+/* tailwind.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Make all buttons light gray by default */
+@layer base {
+    button {
+        @apply bg-gray-200 text-gray-800 border border-gray-100 rounded;
+    }
+
+    /* Optional: hover effect */
+    button:hover {
+        @apply bg-gray-100;
+    }
+}
